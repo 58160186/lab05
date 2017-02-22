@@ -3,21 +3,48 @@
         <script>
         function loadXMLDoc(){
          var xmlhttp;
+         var xmlhttp1;
+         var xmlhttp2;
          if(window.XMLHttpRequest){
              xmlhttp=new XMLHttpRequest();
+             xmlhttp1=new XMLHttpRequest();
+             xmlhttp2=new XMLHttpRequest();
 
          } else{
              xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+             xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP");
+             xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
          }
+         
+
+
          xmlhttp.onreadystatechange= function(){
-             alert(xmlhttp.readyState + " : " + xmlhttp.status);
-             if(xmlhttp.readyState==4 && xmlhttp.status==200){
-                 document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
-             }
+             document.getElementById("myDiv").innerHTML = xmlhttp.responseText;
+             
          }
-         xmlhttp.open("GET","hello.txt",true);
+         xmlhttp.open("GET","kamkom.php",true);
          xmlhttp.send();
-        }
+
+
+
+
+         xmlhttp1.onreadystatechange= function(){
+             document.getElementById("myDiv").innerHTML = xmlhttp1.responseText;
+             
+         }
+         xmlhttp1.open("GET","http://angsila.cs.buu.ac.th/~58160641/887371/lab05/kamkom.php",true);
+         xmlhttp1.send();
+
+
+         xmlhttp2.onreadystatechange= function(){
+             document.getElementById("myDiv").innerHTML = xmlhttp2.responseText;
+             
+         }
+         xmlhttp2.open("GET","http://angsila.cs.buu.ac.th/~58160173/887371/lab05/kamkom.php",true);
+         xmlhttp2.send();
+}
+
+
         </script>
     </head>
     <body>
