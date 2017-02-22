@@ -5,4 +5,4 @@ $a = array ( จงใช้เงินของคุณ
 ไปกับสิ่งที่เงินไม่สามารถซื้อได้
 );
 $random_key = array_rand($a,1);
-echo"<p>" . $a[$random_key] . "</p>"
+echo"<p>" . $a[$random_key] . "</p>";
